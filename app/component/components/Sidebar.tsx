@@ -25,9 +25,9 @@ const Sidebar: React.FC<sidebarprops> = ({
     ];
 
     return (
-        <div className=" border-r border-gray-800 h-full pt-20 w-full flex justify-center">
+        <div className=" border-r border-gray-800 h-full pt-20 w-full flex ">
 
-            <div className="overflow-y-auto h-full w-full  flex flex-col items-center gap-8">
+            <div className="overflow-y-auto h-full w-full  flex flex-col  p-5 gap-8">
                 <div className="flex text-left flex-col gap-8" >
                     {SidebarComp.map((section, index) => (
                         <div key={index} className="w-full">
