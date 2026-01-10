@@ -1,7 +1,6 @@
 "use client"
 import Navbar from "@/app/component/components/Navbar";
 import Sidebar from "@/app/component/components/Sidebar";
-import Link from "next/link";
 import { use, useEffect, useState } from "react";
 import { notFound } from "next/navigation";
 import { CodeBlock } from "../ui/code-block";
@@ -263,7 +262,7 @@ const page = ({ params }: { params: Promise<{ slug: string }> }) => {
     }, [slug])
 
     const handleCopy = async () => {
-        await navigator.clipboard.writeText(comp.code);
+        await navigator.clipboard.writeText(comp?.code);
         setCopied(true);
 
         setTimeout(() => setCopied(false), 1500);
@@ -293,7 +292,7 @@ const page = ({ params }: { params: Promise<{ slug: string }> }) => {
                     <div>
                         <h3 className="font-bold text-2xl py-2 uppercase">Code</h3>
                         <CodeBlock
-                            language="jsx"
+                            language="tsx"
                             filename="button"
                             highlightLines={[9, 13, 14, 18]}
                             code={comp?.code}

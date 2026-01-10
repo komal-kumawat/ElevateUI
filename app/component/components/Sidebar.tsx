@@ -2,9 +2,9 @@
 import Link from "next/link";
 import React, { useState } from "react";
 interface sidebarprops {
-    sidebarComp?: { name: string }[];
-    activeComp: string;
-    setActiveComp: (name: string) => void;
+    sidebarComp?: { name: string  , slug:string}[];
+    activeComp: string | undefined;
+    setActiveComp: (slug: string ) => void;
 }
 
 const Sidebar: React.FC<sidebarprops> = ({
@@ -28,7 +28,7 @@ const Sidebar: React.FC<sidebarprops> = ({
                             <Link
                                 key={idx}
                                 href={`/component/${item?.slug}`}
-                                onClick={() => setActiveComp(item.name)}
+                                onClick={() => setActiveComp(item?.name)}
 
                                 className={`px-2 py-1 m-1 rounded 
                                                 ${activeComp === item.name
