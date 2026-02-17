@@ -45,7 +45,7 @@ export default function TiltCard({
         ref={cardRef}
         onMouseMove={handleMouseMove}
         onMouseLeave={reset}
-        className={`w-64 h-40 flex items-center justify-center bg-neutral-900 border border-neutral-800 rounded-xl transition-transform duration-200 ease-out ${className}`}
+        className={`w-64 h-40 flex items-center justify-center bg-neutral-300 border border-neutral-800 rounded-xl transition-transform duration-200 ease-out ${className}`}
         style={{ transformStyle: "preserve-3d" }}
       >
         {children}

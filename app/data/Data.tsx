@@ -538,7 +538,7 @@ export default function SpotlightCard({ children }) {
   preview: (
     <div className="flex justify-center p-10">
       <TiltCard>
-        <h3 className="text-xl font-bold">3D Card</h3>
+        <h3 className="text-xl font-bold text-neutral-800">3D Card</h3>
       </TiltCard>
     </div>
   ),
